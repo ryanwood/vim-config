@@ -7,8 +7,11 @@ call pathogen#runtime_append_all_bundles()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" change leader from \ to ,
+let mapleader = ","
+
 " keep more history
-set history=100
+set history=1000
 
 " Syntax highlighting
 " Switch syntax highlighting on, when the terminal has colors
@@ -68,10 +71,7 @@ set shortmess=atI
 
 set ruler
 set undolevels=100
-
-" turning off line numbers for now
-"set number
-
+set number
 set showmatch
 
 " Only do this part when compiled with support for autocommands.
@@ -161,14 +161,24 @@ if has('statusline')
 endif
 
 " Quit using the arrow keys, dumbass
-"noremap  <Up> ""
-"noremap! <Up> <Esc>
-"noremap  <Down> ""
-"noremap! <Down> <Esc>
-"noremap  <Left> ""
-"noremap! <Left> <Esc>
-"noremap  <Right> ""
-"noremap! <Right> <Esc>
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+if has("autocmd")
+  au BufNewFile,BufRead *.prawn set filetype=ruby
+  au BufNewFile,BufRead *.scss set filetype=css
+  
+  " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+  autocmd BufWritePost .vimrc source $MYVIMRC
+endif
+
+" Quick vimrc editing
+nmap <leader>v :tabedit $MYVIMRC<CR>
 
 
-au BufNewFile,BufRead *.prawn set filetype=ruby

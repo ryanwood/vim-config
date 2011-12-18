@@ -34,3 +34,6 @@
 [submodule "home/.vim/bundle/command-t"]
 	path = home/.vim/bundle/command-t
 	url = http://github.com/wincent/Command-T.git
+[submodule "home/.vim"]
+	path = home/.vim
+	url = https://github.com/carlhuda/janus.git

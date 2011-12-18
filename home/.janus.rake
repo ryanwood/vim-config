@@ -1,0 +1,12 @@
+skip_vim_plugin "cucumber"
+skip_vim_plugin "scala"
+skip_vim_plugin "puppet"
+skip_vim_plugin "pep8"
+skip_vim_plugin "align"
+
+vim_plugin_task "buffer_explorer", "https://github.com/vim-scripts/bufexplorer.zip.git"
+vim_plugin_task "ragtag", "https://github.com/ryanwood/vim-ragtag.git"
+# vim_plugin_task "snipmate-snippets", "https://github.com/honza/snipmate-snippets.git"
+# vim_plugin_task "lusty", "https://github.com/sjbach/lusty.git"
+vim_plugin_task "vim-slim", "https://github.com/bbommarito/vim-slim.git"
+vim_plugin_task "vim-rename", "https://github.com/wojtekmach/vim-rename.git"
