@@ -5,13 +5,17 @@ let g:bufExplorerShowRelativePath=1
 if has("autocmd")
   autocmd bufwritepost .vimrc,.vimrc.local,.vimrc.pre source $MYVIMRC
 endif
-nmap <leader>v :tabedit .vimrc.local<CR>
+" nmap <leader>v :tabedit .vimrc.local<CR>
 
 " easy window switching
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
+map <c-x> <c-w>x
+
+imap ;; <esc>
+map <Leader>; :ZoomWin<CR>
 
 " diable arrow keys. ouch!
 " inoremap  <up>     <nop>
@@ -34,8 +38,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-map <leader>n :Rename 
-
 " Gary Bernhardt's vimrc file
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 
@@ -44,6 +46,10 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>te :tabedit %%
 map <leader>v :view %%
+
+map <leader>r :Rename %%
+
+nnoremap <leader><leader> <c-^>
 
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
