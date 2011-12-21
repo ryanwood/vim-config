@@ -1,6 +1,12 @@
 colorscheme vividchalk
 let g:bufExplorerShowRelativePath=1
 
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc,.vimrc.local,.vimrc.pre source $MYVIMRC
+endif
+nmap <leader>v :tabedit .vimrc.local<CR>
+
 " easy window switching
 map <c-h> <c-w>h
 map <c-j> <c-w>j
