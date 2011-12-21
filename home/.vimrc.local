@@ -1,3 +1,4 @@
+colorscheme vividchalk
 let g:bufExplorerShowRelativePath=1
 
 " easy window switching
