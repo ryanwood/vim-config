@@ -1,0 +1,12 @@
+let NERDSpaceDelims=1
+
+" easy window switching
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-x> <c-w>x
+
+" GRB: Put useful info in status line
+:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+:hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red

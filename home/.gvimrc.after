@@ -1,0 +1,8 @@
+colorscheme ir_black
+set guifont=Inconsolata-dz:h12
+
+" Don't beep
+set visualbell
+
+" Start without the toolbar
+set guioptions-=T
