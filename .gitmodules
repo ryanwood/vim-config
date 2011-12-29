@@ -37,3 +37,12 @@
 [submodule "home/.vim"]
 	path = home/.vim
 	url = https://github.com/carlhuda/janus.git
+[submodule "home/.janus/rename2"]
+	path = home/.janus/rename2
+	url = git://github.com/vim-scripts/Rename2.git
+[submodule "home/.janus/vim-slim"]
+	path = home/.janus/vim-slim
+	url = https://github.com/bbommarito/vim-slim.git
+[submodule "home/.janus/ragtag"]
+	path = home/.janus/ragtag
+	url = https://github.com/ryanwood/vim-ragtag.git
