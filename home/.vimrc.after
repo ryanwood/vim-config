@@ -8,5 +8,12 @@ map <c-l> <c-w>l
 map <c-x> <c-w>x
 
 " GRB: Put useful info in status line
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-:hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
+
+" GRB: clear the search buffer when hitting return
+nnoremap <CR> :nohlsearch<cr>
+
+set winwidth=79
+
+nnoremap <leader><leader> <c-^>
