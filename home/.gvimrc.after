@@ -1,10 +1,11 @@
 colorscheme ir_black
 set guifont=Inconsolata-dz:h12
 
-map <D-T> :tabnew
-
 " Don't beep
 set visualbell
 
 " Start without the toolbar
 set guioptions-=T
+
+macmenu &File.Open\ Tab\.\.\. key=<nop>
+nnoremap <D-T> :tabnew<cr>
