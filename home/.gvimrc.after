@@ -7,5 +7,7 @@ set visualbell
 " Start without the toolbar
 set guioptions-=T
 
+map <leader>fn :NERDTreeFind<cr>
+
 macmenu &File.Open\ Tab\.\.\. key=<nop>
 nnoremap <D-T> :tabnew<cr>
