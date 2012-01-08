@@ -8,3 +8,15 @@ call janus#disable_plugin('cucumber')
 call janus#disable_plugin('nodejs')
 call janus#disable_plugin('handlebars')
 call janus#disable_plugin('mustache')
+
+"
+" Plugin Settings
+"
+
+let NERDSpaceDelims=1
+
+let g:buffergator_sort_regime = "mru"
+let g:buffergator_autoexpand_on_split = 0
+let g:buffergator_display_regime = "bufname"
+let g:buffergator_split_size = 50
+
