@@ -4,3 +4,6 @@
 [submodule "home/.janus/vim-ragtag"]
 	path = home/.janus/vim-ragtag
 	url = https://github.com/tpope/vim-ragtag.git
+[submodule "home/.janus/vim-buffergator"]
+	path = home/.janus/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
