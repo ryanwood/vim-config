@@ -1,6 +1,7 @@
 "
 " General Settings
 "
+" set hidden
 
 " GRB: Put useful info in status line
 " set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
@@ -51,6 +52,12 @@ nmap <leader>kk :%s/ \+$//g<cr>
 nmap <leader>kl :%s/<C-v><C-m>//g<cr>
 " nmap <silent> <leader>kl :%s/ \+$//g<cr><cr>\|:%s/<C-v><C-m>//g<cr><cr>:w<cr>
 
+" "Very magic" regexes in searches
+" nnoremap / /\v
+" nnoremap ? ?\v
+
+map <c-s> :%s/\v
+
 "
 " Un-mappings
 "
@@ -58,3 +65,14 @@ nmap <leader>kl :%s/<C-v><C-m>//g<cr>
 " These Janus mapping slow down the ; when searching
 unmap ;l
 unmap ;'
+
+" Taken from Gary Bernhardt
+" https://github.com/garybernhardt/dotfiles/master/.vimrc
+function! PromoteToLet()
+  :normal! dd
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
